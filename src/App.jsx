@@ -35,7 +35,7 @@ const CATEGORIES = [
   { id: "clothing", label: "Clothing", emoji: "👗", count: 512 },
   { id: "sports", label: "Sports", emoji: "⚽", count: 203 },
   { id: "music", label: "Music & Instruments", emoji: "🎸", count: 88 },
-  { id: "garden", label: "Garden", emoji: "🌿", count: 61 },
+  { id: "garden", label: "Garden", emoji: "🌿", count: 64 },
 ];
 
 const ITEMS = [
@@ -45,6 +45,9 @@ const ITEMS = [
   { id: 4, title: "Gibson Les Paul Guitar", category: "music", owner: "Sara B.", location: "Shkodër", img: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&q=80", wants: "Electronic drums or synth", condition: "Good", date: "3d ago" },
   { id: 5, title: "Complete Book Collection (50 books)", category: "books", owner: "Mikel D.", location: "Tirana", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80", wants: "Board games or vinyl records", condition: "Good", date: "1w ago" },
   { id: 6, title: "MacBook Pro 2021", category: "electronics", owner: "Lira H.", location: "Vlorë", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80", wants: "High-end camera gear", condition: "Excellent", date: "12h ago" },
+  { id: 7, title: "Monstera Deliciosa Plant", category: "garden", owner: "Ina S.", location: "Fier", img: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&q=80", wants: "Ceramic pots or pruning tools", condition: "Healthy", date: "6h ago" },
+  { id: 8, title: "Raised Herb Planter Kit", category: "garden", owner: "Bledi R.", location: "Elbasan", img: "https://images.unsplash.com/photo-1425934384826-0a4abc2f37ff?w=400&q=80", wants: "Watering can or seed packets", condition: "Good", date: "2d ago" },
+  { id: 9, title: "Succulent Starter Set", category: "garden", owner: "Erisa P.", location: "Sarandë", img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&q=80", wants: "Plant stand or garden gloves", condition: "Excellent", date: "1d ago" },
 ];
 
 // ─── SHARED COMPONENTS ───────────────────────────────────────────
@@ -165,8 +168,8 @@ const Home = ({ setPage, setSelectedItem, setSelectedCategory }) => (
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, marginBottom: 48 }}>How SwapShop Works</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 40 }}>
           {[["01", "Browse & Find", "Search by category or keyword. Find the exact item you want from people near you."],
-            ["02", "Make Your Offer", "No cash — just pick something you own and send an offer photo to the item's owner."],
-            ["03", "Swap Securely", "Both sides confirm. We guide you through a safe local meetup or verified exchange."]].map(([n, t, d]) => (
+          ["02", "Make Your Offer", "No cash — just pick something you own and send an offer photo to the item's owner."],
+          ["03", "Swap Securely", "Both sides confirm. We guide you through a safe local meetup or verified exchange."]].map(([n, t, d]) => (
             <div key={n}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 48, fontWeight: 900, color: COLORS.accent, opacity: .4, marginBottom: 12 }}>{n}</div>
               <div style={{ fontWeight: 500, fontSize: 18, marginBottom: 10 }}>{t}</div>
@@ -368,8 +371,8 @@ const MyOffers = () => (
       ))}
     </div>
     {[["Sent offer on: Gibson Les Paul", "You offered: MacBook Air", "Awaiting response", COLORS.accentGold, COLORS.accentLight],
-      ["Sent offer on: Herman Miller Chair", "You offered: Desk lamp + books", "Declined", COLORS.accent, COLORS.accentLight],
-      ["Sent offer on: Trek Bike", "You offered: Sony Camera", "Accepted 🎉", COLORS.tagGreen, COLORS.tagGreenBg]].map(([t, o, s, sc, sbg]) => (
+    ["Sent offer on: Herman Miller Chair", "You offered: Desk lamp + books", "Declined", COLORS.accent, COLORS.accentLight],
+    ["Sent offer on: Trek Bike", "You offered: Sony Camera", "Accepted 🎉", COLORS.tagGreen, COLORS.tagGreenBg]].map(([t, o, s, sc, sbg]) => (
       <div key={t} style={{ background: COLORS.bgCard, border: `1.5px solid ${COLORS.border}`, borderRadius: 12, padding: "18px 22px", marginBottom: 12, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <div style={{ fontWeight: 500, marginBottom: 4 }}>{t}</div>
