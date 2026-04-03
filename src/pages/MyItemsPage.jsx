@@ -2,10 +2,10 @@ import { ITEMS } from "../data.js";
 import { COLORS } from "../styles/theme.js";
 
 const MyItemsPage = ({ setPage }) => (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "48px 40px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32 }}>
+    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "clamp(30px, 8vw, 48px) clamp(20px, 5vw, 40px)" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
             <div>
-                <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, marginBottom: 4 }}>My Items</h1>
+                <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 6vw, 36px)", fontWeight: 700, marginBottom: 4 }}>My Items</h1>
                 <p style={{ color: COLORS.inkMuted }}>Items you've listed for swap.</p>
             </div>
             <button onClick={() => setPage("createitem")} style={{ padding: "10px 22px", background: COLORS.accent, color: "#fff", border: "none", borderRadius: 8, fontSize: 14, fontWeight: 500, cursor: "pointer", fontFamily: "'DM Sans', sans-serif" }}>+ Add Item</button>

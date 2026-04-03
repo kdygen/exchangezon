@@ -41,7 +41,7 @@ export default function App() {
     <div style={{ minHeight: "100vh", background: COLORS.bg }}>
       <Nav page={page} setPage={setPage} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       {renderPage()}
-      <footer style={{ borderTop: `1.5px solid ${COLORS.border}`, padding: "30px 40px", display: "flex", justifyContent: "space-between", alignItems: "center", background: COLORS.bgCard }}>
+      <footer style={{ borderTop: `1.5px solid ${COLORS.border}`, padding: "clamp(20px, 5vw, 30px) clamp(20px, 5vw, 40px)", display: "flex", justifyContent: "space-between", alignItems: "center", background: COLORS.bgCard, flexWrap: "wrap", gap: 20 }}>
         <Logo onClick={() => setPage("home")} />
         <div style={{ fontSize: 13, color: COLORS.inkMuted }}>© 2025 SwapShop · Trade anything, buy nothing.</div>
       </footer>

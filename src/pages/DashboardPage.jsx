@@ -1,10 +1,10 @@
 import { COLORS } from "../styles/theme.js";
 
 const DashboardPage = ({ setPage }) => (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "48px 40px" }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, marginBottom: 6 }}>Dashboard</h1>
+    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "clamp(30px, 8vw, 48px) clamp(20px, 5vw, 40px)" }}>
+        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 6vw, 36px)", fontWeight: 700, marginBottom: 6 }}>Dashboard</h1>
         <p style={{ color: COLORS.inkMuted, marginBottom: 36 }}>Here's an overview of your swap activity.</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 40 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 16, marginBottom: 40 }}>
             {[["3", "Active Listings", COLORS.accent], ["2", "Pending Offers", COLORS.accentGold], ["7", "Swaps Done", COLORS.tagGreen], ["4.9", "Your Rating", COLORS.ink]].map(([v, l, c]) => (
                 <div key={l} style={{ background: COLORS.bgCard, border: `1.5px solid ${COLORS.border}`, borderRadius: 12, padding: "22px 20px" }}>
                     <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: c }}>{v}</div>
@@ -12,7 +12,7 @@ const DashboardPage = ({ setPage }) => (
                 </div>
             ))}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
             <div style={{ background: COLORS.bgCard, border: `1.5px solid ${COLORS.border}`, borderRadius: 12, padding: "24px" }}>
                 <div style={{ fontWeight: 600, marginBottom: 16 }}>Recent Offers Received</div>
                 {[["Elira M.", "Offering: Sony Camera", "Pending"], ["Gjon P.", "Offering: Desk Lamp", "Accepted"]].map(([n, o, s]) => (

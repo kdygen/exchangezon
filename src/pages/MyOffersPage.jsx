@@ -1,8 +1,8 @@
 import { COLORS } from "../styles/theme.js";
 
 const MyOffersPage = () => (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "48px 40px" }}>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, marginBottom: 6 }}>My Offers</h1>
+    <div style={{ maxWidth: 900, margin: "0 auto", padding: "clamp(30px, 8vw, 48px) clamp(20px, 5vw, 40px)" }}>
+        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 6vw, 36px)", fontWeight: 700, marginBottom: 6 }}>My Offers</h1>
         <p style={{ color: COLORS.inkMuted, marginBottom: 32 }}>Offers you've sent and received.</p>
         <div style={{ display: "flex", gap: 0, marginBottom: 24, borderBottom: `2px solid ${COLORS.border}` }}>
             {["Sent", "Received"].map((t, i) => (

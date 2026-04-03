@@ -13,9 +13,9 @@ const AuthPage = ({ mode, setPage, setLoggedIn }) => {
     };
 
     return (
-        <div style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", padding: 40 }}>
-            <div style={{ background: COLORS.bgCard, border: `1.5px solid ${COLORS.border}`, borderRadius: 16, padding: "48px 44px", width: "100%", maxWidth: 420 }} className="fade-up">
-                <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, fontWeight: 700, marginBottom: 6 }}>{isLogin ? "Welcome back" : "Join SwapShop"}</h1>
+        <div style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "clamp(20px, 5vw, 40px)" }}>
+            <div style={{ background: COLORS.bgCard, border: `1.5px solid ${COLORS.border}`, borderRadius: 16, padding: "clamp(30px, 5vw, 48px) clamp(25px, 4vw, 44px)", width: "100%", maxWidth: 420 }} className="fade-up">
+                <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(24px, 5vw, 30px)", fontWeight: 700, marginBottom: 6 }}>{isLogin ? "Welcome back" : "Join SwapShop"}</h1>
                 <p style={{ color: COLORS.inkMuted, fontSize: 14, marginBottom: 30 }}>{isLogin ? "Log in to manage your swaps." : "Create a free account and start trading."}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                     {!isLogin && <input value={name} onChange={e => setName(e.target.value)} placeholder="Full name" style={{ padding: "12px 14px", border: `1.5px solid ${COLORS.border}`, borderRadius: 8, fontSize: 14, fontFamily: "'DM Sans', sans-serif", background: COLORS.bg, outline: "none" }} />}

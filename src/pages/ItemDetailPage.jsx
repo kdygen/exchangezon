@@ -8,9 +8,9 @@ const ItemDetailPage = ({ item, setPage, loggedIn }) => {
     if (!item) return null;
 
     return (
-        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "48px 40px" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "clamp(30px, 8vw, 48px) clamp(20px, 5vw, 40px)" }}>
             <button onClick={() => setPage("browse")} style={{ background: "none", border: "none", color: COLORS.inkMuted, cursor: "pointer", fontSize: 14, marginBottom: 28 }}>← Back to Browse</button>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(25px, 5vw, 40px)", '@media (max-width: 768px)': { gridTemplateColumns: '1fr' } }}>
                 <div>
                     <img src={item.img} alt={item.title} style={{ width: "100%", borderRadius: 14, border: `1.5px solid ${COLORS.border}` }} />
                 </div>

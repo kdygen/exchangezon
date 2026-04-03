@@ -11,7 +11,7 @@ const Nav = ({ page, setPage, loggedIn, setLoggedIn }) => {
     ].filter(Boolean);
 
     return (
-        <nav style={{ position: "sticky", top: 0, zIndex: 100, background: COLORS.bgCard, borderBottom: `1.5px solid ${COLORS.border}`, padding: "0 40px", display: "flex", alignItems: "center", gap: 32, height: 62 }}>
+        <nav style={{ position: "sticky", top: 0, zIndex: 100, background: COLORS.bgCard, borderBottom: `1.5px solid ${COLORS.border}`, padding: "0 max(20px, 5%)", display: "flex", alignItems: "center", gap: "max(20px, 2%)", height: 62, flexWrap: "wrap" }}>
             <Logo onClick={() => setPage("home")} />
             <div style={{ display: "flex", gap: 4, flex: 1 }}>
                 {navLinks.map(l => (

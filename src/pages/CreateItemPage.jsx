@@ -20,8 +20,8 @@ const CreateItemPage = ({ setPage }) => {
     );
 
     return (
-        <div style={{ maxWidth: 680, margin: "0 auto", padding: "48px 40px" }}>
-            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, marginBottom: 6 }}>List an Item</h1>
+        <div style={{ maxWidth: 680, margin: "0 auto", padding: "clamp(30px, 8vw, 48px) clamp(20px, 5vw, 40px)" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 6vw, 36px)", fontWeight: 700, marginBottom: 6 }}>List an Item</h1>
             <p style={{ color: COLORS.inkMuted, marginBottom: 36 }}>Tell people what you have and what you want in return.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
                 <div style={{ border: `2px dashed ${COLORS.border}`, borderRadius: 12, padding: "40px 20px", textAlign: "center", background: COLORS.bgCard, cursor: "pointer" }}
@@ -35,7 +35,7 @@ const CreateItemPage = ({ setPage }) => {
                     <label style={{ fontSize: 12, fontWeight: 600, display: "block", marginBottom: 6, color: COLORS.inkMuted, letterSpacing: .5 }}>ITEM TITLE</label>
                     <input value={title} onChange={e => setTitle(e.target.value)} placeholder="e.g. Trek Mountain Bike 2019" style={{ width: "100%", padding: "12px 14px", border: `1.5px solid ${COLORS.border}`, borderRadius: 8, fontSize: 14, fontFamily: "'DM Sans', sans-serif", background: COLORS.bg, outline: "none" }} />
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
                     <div>
                         <label style={{ fontSize: 12, fontWeight: 600, display: "block", marginBottom: 6, color: COLORS.inkMuted, letterSpacing: .5 }}>CATEGORY</label>
                         <select value={cat} onChange={e => setCat(e.target.value)} style={{ width: "100%", padding: "12px 14px", border: `1.5px solid ${COLORS.border}`, borderRadius: 8, fontSize: 14, background: COLORS.bg, fontFamily: "'DM Sans', sans-serif", color: cat ? COLORS.ink : COLORS.inkMuted }}>
