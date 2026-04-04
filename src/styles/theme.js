@@ -19,11 +19,30 @@ export const injectGlobalStyles = () => {
     style.textContent = `
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: ${COLORS.bg}; font-family: 'DM Sans', sans-serif; color: ${COLORS.ink}; }
-    ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-thumb { background: ${COLORS.border}; border-radius: 3px; }
+    body { 
+      background: ${COLORS.bg}; 
+      font-family: 'DM Sans', sans-serif; 
+      color: ${COLORS.ink};
+      overflow-x: hidden;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; } 
+    ::-webkit-scrollbar-thumb { background: ${COLORS.border}; border-radius: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    @media (max-width: 768px) {
+      ::-webkit-scrollbar { width: 4px; }
+    }
     @keyframes fadeUp { from { opacity:0; transform:translateY(18px);} to { opacity:1; transform:translateY(0);} }
     @keyframes spin { to { transform: rotate(360deg); } }
     .fade-up { animation: fadeUp .45s ease both; }
+    @media (max-width: 480px) {
+      button, input, textarea, select {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
   `;
     document.head.appendChild(style);
 };

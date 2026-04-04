@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "./components/Nav.jsx";
 import Logo from "./components/Logo.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import { injectGlobalStyles, COLORS } from "./styles/theme.js";
 import HomePage from "./pages/HomePage.jsx";
 import BrowsePage from "./pages/BrowsePage.jsx";
@@ -45,6 +46,7 @@ export default function App() {
         <Logo onClick={() => setPage("home")} />
         <div style={{ fontSize: 13, color: COLORS.inkMuted }}>© 2025 SwapShop · Trade anything, buy nothing.</div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }
